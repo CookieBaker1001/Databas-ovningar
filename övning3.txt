@@ -1,0 +1,20 @@
+1. Beskriv vad lastbalansering innebär (i allmänhet, behöver inte gälla just databaser)
+Lastbalansering innebär att man fördelar aktivitet på en större yta. Detta gör så att enskilda komponenter i ett system inte behöver arbeta så hårt då flera komponenter hjälper till. 
+
+2. Ge ett konkret exempel på där lastbalansering kan vara bra att använda. 
+En hemsida som har hög traffik-mängd (genomsnittliga: förfrågningar per tidsenhet). Man kan lastbalansera genom att implementera flera servrar som hjälper till att ta emot och hantera HTTP-anrop så att den enstaka ursprungliga servern inte behöver tröttas ut av att hantera höga mängder traffik. Detta kan leda till bättre respons-tid.
+
+3. Anta att du bygger en hemsida. Vilka fördelar finns med använda lastbalansering? 
+Ange tre fördelar
+Mindre sannolikhet att hemsidan går ner eftersom alla servrar måste krascha för att sidan ska bli helt otillgänglig. 
+Bättre respons-tid eftersom flera servrar kan hjälpas åt att besvara HTTP-anrop.
+Bättre skalbarthet om vissa klienter vill ha olika resurser. Lasbalansering kan användas så att olika servrar/delar av systemet hanterar olika resurser, vilket gör systemet snabbare. 
+
+4. Vad är SQL Server Replication?
+Att man förvarar samma data på flera olika SQL-servrar vilket gör datan mer tillgänglig till olika delar av organisationen, men det skapar däremot synkroniserings-behov. 
+
+5. Vad är Mirroring i SQL Server?
+Man skapar kopior av datan, men kopiorna används inte som aktiv data som andra partier kan använda vid konventionella SQL-anrop. Kopiorna används istället som backup. 
+
+6. Vad är AlwaysOn Availability Groups i SQL Server?
+Lite bättre än Mirroring. Man kan göra flera kopior istället för en, och det är möjligt att läsa från kopiorna. 
